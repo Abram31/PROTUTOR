@@ -1,0 +1,111 @@
+$(document).ready(function () {
+    $('#apply_politics').click(function () {
+        var temp = location.host.split('.').reverse();
+        var root_domain = '.' + temp[1] + '.' + temp[0];
+        document.cookie = "politics=true;domain=" + root_domain + ";path=/;expires=Fri, 31 Dec 9999 23:59:59 GMT";
+        $(".bottomline").hide();
+    });
+    if (!getCookieValue('politics')) {
+        $(".bottomline").show();
+    }
+
+    $(".popup").magnificPopup();
+
+    $("select:not(.def-select, .package_select)").styler({
+        onFormStyled: function () {
+            // к открытому селекту добавляется красная обводка
+            $(".content>.container>.content-wrapper .left").fadeIn();
+            $(".content>.container>.content-wrapper .right").fadeIn();
+            $(".content>.container>.content-wrapper").removeClass("load");
+        }
+    });
+
+    $("#createOrderForm").submit(function (e) {
+        e.preventDefault();
+        var but = $(this).find(".btn");
+        loaderButton(but, true);
+        $.ajax({
+            type: 'POST',
+            url: '/customer/order',
+            data: $(this).serialize()
+        }).done(function (response) {
+            if (response.order && response.order.id) {
+                $.magnificPopup.close();
+                document.location = response.url;
+                return false;
+            }
+            loaderButton(but, false);
+            alert("Ошибка при создании заявки");
+        });
+    });
+
+    $(".hp-scroll a").on("click", function (e) {
+        point = $(this).attr("href");
+
+        $(".help-popup-content").stop().animate({
+            scrollTop: $(".help-popup-content").scrollTop()
+                + $(point).position().top - $(".help-popup-content").position().top - 20
+        }, 1000);
+
+        e.preventDefault();
+    });
+
+    $("#package_select").on("change", function (e) {
+        var url = "/order/packages/" + e.target.value;
+
+        if (e.target[e.target.selectedIndex].className.trim() == 'onetime') {
+            $("#invoice_lesson_input").val('')
+            $("#invoice_lesson_input_block").show();
+        } else {
+            $("#invoice_lesson_input_block").hide();
+        }
+
+        $.ajax({
+            type: "post",
+            url: url,
+            async: true,
+            success: function (data) {
+                if (data.status == "ERROR") {
+                    alert("Ошибка");
+                }
+                if (data.package) {
+                    let currency_text = 'руб.'
+                    switch (data.package.currency_id) {
+                        case '1':
+                            currency_text = 'BYN';
+                            break;
+                        case '2':
+                            currency_text = 'RUB';
+                            break;
+                    }
+                    $('#invoice_lesson_price').text((Math.round(data.package.sum * 100) / 100).toFixed(2).replace('.', ',') + ' '+ currency_text);
+                    if (data.package.type != 1) {
+                        $("#newInvoiceForm input[name=n_lessons]").val(data.package.n_lessons)
+                    }
+                    $('#invoice_lesson_price_input').val(data.package.sum);
+                    $('#invoice_full_price').text((Math.round(data.package.n_lessons * data.package.sum * 100) / 100).toFixed(2).replace('.', ',') + ' '+ currency_text);
+                    $('#invoice_discount_price').text((Math.round(data.package.saving * 100) / 100).toFixed(2).replace('.', ',') + ' '+ currency_text);
+                } else {
+                    $('#invoice_lesson_price').html(0);
+                    $('#invoice_full_price').html(0);
+                    $('#package_term').html(0);
+                }
+            },
+            error: function (data) {
+                return false;
+            }
+        });
+    });
+
+    $("#invoice_lesson_input").on("keyup", function (e) {
+        if ($("#invoice_lesson_input").val() < 2 || $("#invoice_lesson_input").val() > 7) {
+            $("#invoice_lesson_input").val('')
+            return;
+        }
+        var lesson_price = $("#invoice_lesson_price_input").val()
+        $('#invoice_full_price').text((Math.round(lesson_price * $("#invoice_lesson_input").val() * 100) / 100).toFixed(2).replace('.', ',') + ' руб.');
+    });
+
+});
+
+

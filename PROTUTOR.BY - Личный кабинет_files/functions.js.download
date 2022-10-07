@@ -1,0 +1,17 @@
+function loaderButton(el, is_loaded) {
+    if (!is_loaded) {
+        el.html(el.attr('old_html'));
+        el.removeClass("disabled");
+        el.prop("disabled", false);
+    } else {
+        var val = el.html();
+        el.attr('old_html', val);
+        el.html("<i class=\"fa fa-refresh fa-spin\"></i> Подождите");
+        el.addClass("disabled");
+        el.prop("disabled", true);
+    }
+}
+function getCookieValue(a) {
+    var b = document.cookie.match('(^|;)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b ? b.pop() : '';
+}

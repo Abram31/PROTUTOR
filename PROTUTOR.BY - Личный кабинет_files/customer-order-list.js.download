@@ -1,0 +1,21 @@
+$(document).ready(function() {
+    $(".close-cross").click(function(e){
+
+        e.preventDefault();
+
+        if(!confirm("Вы действитель хотите удалить заявку?")) {
+            return false;
+        }
+
+        var button = this;
+
+        $.post('/customer/order/remove', {id: $(this).attr("data-id")}, function(response) {
+            if(response.status == "ERROR") {
+                return alert("Произошла ошибка при удалении заявки, при повторении обратитиесь в службу технической поддержки");
+            }
+
+            $(button).parents(".chat-message").remove();
+
+        }, "json");
+    });
+});
