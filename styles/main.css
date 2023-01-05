@@ -1,0 +1,67 @@
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.reports {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color-main);
+    padding: 2rem 1.2rem;
+}
+
+/* ================= FORM ================= */
+
+.wrapper-choose-period {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.wrapper-choose-period__title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.wrapper-inputs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.wrapper-choose-period__start,
+.wrapper-choose-period__finish {
+    width: 195px;
+    height: 50px;
+    border-radius: 5px;
+    border: 2px solid #F0F0F0;
+    background-color: #f5f5f530;
+    ;
+}
+
+.wrapper-choose-period__start:hover,
+.wrapper-choose-period__finish:hover,
+.wrapper-choose-period__button:hover {
+    cursor: pointer;
+}
+
+.wrapper-choose-period__dash {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.wrapper-choose-period__button {
+    background-color: rgba(146, 195, 124, 1);
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+
+    text-transform: uppercase;
+    color: var(--font-color-header-footer);
+}
+
+.wrapper-choose-period__finish {}

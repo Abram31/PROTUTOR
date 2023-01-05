@@ -1,9 +1,14 @@
 body {
     font-family: "GothamProRegular", sans-serif;
+    background-color: var(--background-color-body);
 }
+
 .main {
     max-width: 980px;
     margin: 0 auto;
     overflow: hidden;
+
+    
+    /* display: flex;
+    flex-direction: column; */
 }
- 

@@ -1,5 +1,8 @@
 :root {
     --font-color-header-footer: #fff;
+
+    --background-color-body:#F5F5F5;
+    --background-color-main: #fff;
     --background-color-header-footer: #333333;
 }
 

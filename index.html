@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/main.css">
     <title>Отчеты</title>
 </head>
 
@@ -23,7 +24,7 @@
             <ul class="wrapper-links">
                 <li class="my-applications"><a href="/" class="my-applications__link header-link">Мои заявки</a></li>
                 <li class="my-data"><a href="/" class="my-data__link header-link">Мои данные</a></li>
-                <li class="reports"><a href="/" class="reports__link header-link">Отчеты</a></li>
+                <li class="report"><a href="/" class="reports__link header-link">Отчеты</a></li>
                 <li class="exit"><a href="/" class="exit__link header-link">Выход</a></li>
             </ul>
         </div>
@@ -33,10 +34,12 @@
         <section class="reports">
             <form class="wrapper-choose-period">
                 <label for="" class="wrapper-choose-period__title">Период</label>
-                <input type="date" class="wrapper-choose-period__start">
-                <span class="wrapper-choose-period__dash">-</span>
-                <input type="date" class="wrapper-choose-period__finish">
-                <button type="submit">Показать</button>
+                <div class="wrapper-inputs">
+                    <input type="text" placeholder="начало" onfocus="(this.type='date')" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" class="wrapper-choose-period__start">
+                    <span class="wrapper-choose-period__dash">-</span>
+                    <input type="text" placeholder="окончание" onfocus="(this.type='date')" class="wrapper-choose-period__finish">
+                </div>
+                <button type="submit" class="wrapper-choose-period__button">Показать</button>
             </form>
             <div class="extraction">
                 <h3 class="extraction__title">Вывод дохода:</h3>
