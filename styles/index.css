@@ -1,11 +1,4 @@
-@font-face {
-    font-family: "GothamProRegular";
-    src: url("../assets/fonts/GothamPro/gothampro.ttf");
-    font-style: normal;
-    font-weight: normal;
-}
-
 body {
-    font-size: "GothamProRegular", sans-serif;
+    font-family: "GothamProRegular", sans-serif;
 }
  

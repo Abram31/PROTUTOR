@@ -38,5 +38,5 @@
     align-items: center;
     height: 50px;
     padding-right: 1rem;
-    border-right: var(--font-color-header-footer) 2px solid;
+    border-right: rgba(255, 255, 255, 0.2) 2px solid;
 }
