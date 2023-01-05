@@ -28,8 +28,95 @@
             </ul>
         </div>
     </header>
-    <main>
-<br>
+    <main class="main">
+        <h2 class="title">Отчеты</h2>
+        <section class="reports">
+            <form class="wrapper-choose-period">
+                <label for="" class="wrapper-choose-period__title">Период</label>
+                <input type="date" class="wrapper-choose-period__start">
+                <span class="wrapper-choose-period__dash">-</span>
+                <input type="date" class="wrapper-choose-period__finish">
+                <button type="submit">Показать</button>
+            </form>
+            <div class="extraction">
+                <h3 class="extraction__title">Вывод дохода:</h3>
+                <p class="extraction__description">В выбранном периоде не было выводов дохода</p>
+            </div>
+            <table class="table">
+                <tr>
+                    <th class="column-date">Дата</th>
+                    <th class="column-amount-extraction">Сумма выводов</th>
+                    <th class="column-amount-tax">Сумма для налога</th>
+                </tr>
+                <tr>
+                    <td class="date">23.05.2022</td>
+                    <td class="amount-extraction">250.00 BYN</td>
+                    <td class="amount-tax">300.00 BYN</td>
+                </tr>
+                <tr>
+                    <td class="date">25.05.2022</td>
+                    <td class="amount-extraction">250.00 BYN</td>
+                    <td class="amount-tax">355.00 BYN</td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+
+            <p class="text-warning">
+                <span class="text-warning__attention">Обратите внимание!</span>
+                Если вы являетесь плательщиком налога на
+                профессиональный доход, вам необходимо указывать другие
+                суммы в налоговом отчете. Для их отображения обратитесь к нам:
+                <a class="support__mail-link" href="mailto:help@protutor.by">help@protutor.by</a>
+                или
+                <a href="tel:+375293035050" class="contacts__phone">+375 (29) 303-50-50</a>
+            </p>
+
+            <div class="amounts-extraction-all">
+                <h4 class="amounts-extraction-all__title">Итого выведено:</h4>
+                <span class="amounts-extraction-all__sum"> 405.00 BYN</span>
+            </div>
+
+            <div class="amounts-tax-all">
+                <h4 class="amounts-tax-all__title">Итого сумма для расчета налога:</h4>
+                <span class="amounts-tax-all__sum"> 560.00 BYN</span>
+            </div>
+
+            <div class="other_statistic">
+                <h3 class="other_statistic__title">Другая статистика</h3>
+                <p class="other_statistic__paid-lessons">Оплачено уроков: <span class="paid-lessons__amount"> 205</span>
+                </p>
+                <p class="other_statistic__lessons-learned">Проведено уроков: <span class="lessons-learned__amount">
+                        150</span></p>
+                <p class="other_statistic__sum-lessons-learned">Сумма проведенных уроков: <span
+                        class="sum-lessons-learned__amount"> 1500.00 BYN</span></p>
+            </div>
+
+        </section>
+        <section class="description">
+            <p class="description__first">* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis
+                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem
+                ipsum dolor sit
+                amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p class="description__second">** Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.""Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat
+                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
 
     </main>
     <footer class="footer">

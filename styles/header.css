@@ -1,7 +1,6 @@
 .header {
     background-color: var(--background-color-header-footer);
     height: 70px;
-    /* padding: 0 1rem; */
 }
 
 .wrapper-header {
