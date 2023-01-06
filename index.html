@@ -35,9 +35,11 @@
             <form class="wrapper-choose-period">
                 <label for="" class="wrapper-choose-period__title">Период</label>
                 <div class="wrapper-inputs">
-                    <input type="text" placeholder="начало" onfocus="(this.type='date')" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" class="wrapper-choose-period__start">
+                    <input type="text" placeholder="начало" onfocus="(this.type='date')" required
+                        pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" class="wrapper-choose-period__start">
                     <span class="wrapper-choose-period__dash">-</span>
-                    <input type="text" placeholder="окончание" onfocus="(this.type='date')" class="wrapper-choose-period__finish">
+                    <input type="text" placeholder="окончание" onfocus="(this.type='date')"
+                        class="wrapper-choose-period__finish">
                 </div>
                 <button type="submit" class="wrapper-choose-period__button">Показать</button>
             </form>
@@ -46,17 +48,17 @@
                 <p class="extraction__description">В выбранном периоде не было выводов дохода</p>
             </div>
             <table class="table">
-                <tr>
+                <tr class="wrapper-columns">
                     <th class="column-date">Дата</th>
                     <th class="column-amount-extraction">Сумма выводов</th>
-                    <th class="column-amount-tax">Сумма для налога</th>
+                    <th class="column-amount-tax">Сумма для налога<span class="star-warning">*</span> </th>
                 </tr>
-                <tr>
+                <tr class="wrapper-row">
                     <td class="date">23.05.2022</td>
                     <td class="amount-extraction">250.00 BYN</td>
                     <td class="amount-tax">300.00 BYN</td>
                 </tr>
-                <tr>
+                <tr class="wrapper-row">
                     <td class="date">25.05.2022</td>
                     <td class="amount-extraction">250.00 BYN</td>
                     <td class="amount-tax">355.00 BYN</td>
@@ -72,7 +74,7 @@
                 суммы в налоговом отчете. Для их отображения обратитесь к нам:
                 <a class="support__mail-link" href="mailto:help@protutor.by">help@protutor.by</a>
                 или
-                <a href="tel:+375293035050" class="contacts__phone">+375 (29) 303-50-50</a>
+                <a href="tel:+375293035050" class="contacts__attention-phone">+375 (29) 303-50-50</a>
             </p>
 
             <div class="amounts-extraction-all">
@@ -81,7 +83,8 @@
             </div>
 
             <div class="amounts-tax-all">
-                <h4 class="amounts-tax-all__title">Итого сумма для расчета налога:</h4>
+                <h4 class="amounts-tax-all__title">Итого сумма для расчета налога<span class="star-warning">*</span>:
+                </h4>
                 <span class="amounts-tax-all__sum"> 560.00 BYN</span>
             </div>
 
@@ -91,34 +94,42 @@
                 </p>
                 <p class="other_statistic__lessons-learned">Проведено уроков: <span class="lessons-learned__amount">
                         150</span></p>
-                <p class="other_statistic__sum-lessons-learned">Сумма проведенных уроков: <span
-                        class="sum-lessons-learned__amount"> 1500.00 BYN</span></p>
+                <p class="other_statistic__sum-lessons-learned">Сумма проведенных уроков <span
+                        class="star-warning">**</span>: <span class="sum-lessons-learned__amount"> 1500.00 BYN</span>
+                </p>
             </div>
 
-        </section>
-        <section class="description">
-            <p class="description__first">* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint
-                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem
-                ipsum dolor sit
-                amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <p class="description__second">** Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.""Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                occaecat cupidatat
-                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <section class="description">
+                <p class="description__first">* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo
+                    consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                    laborum.""Lorem
+                    ipsum dolor sit
+                    amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut
+                    enim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p class="description__second">** Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                    officia
+                    deserunt mollit anim id est laborum.""Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore
+                    magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.
+                    Duis aute irure
+                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                    sint
+                    occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </section>
         </section>
 
     </main>
