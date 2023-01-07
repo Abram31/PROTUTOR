@@ -23,7 +23,7 @@
 .header-link {
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--font-color-header-footer);
+    color: var(--text-color-header-footer);
 }
 
 .header-link:hover {

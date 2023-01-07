@@ -5,3 +5,10 @@
     font-style: normal;
     font-weight: normal;
 }
+@font-face {
+    font-family: "GothamProMedium";
+    src: url("../assets/fonts/GothamPro/Gotham Pro Medium Regular.woff") format("woff"),
+        url("../assets/fonts/GothamPro/gothampro_medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

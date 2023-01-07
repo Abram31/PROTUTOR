@@ -1,17 +1,15 @@
 body {
     font-family: "GothamProRegular", sans-serif;
     background-color: var(--background-color-body);
+    font-size: var(--font-size-main);
 }
 
 .main {
     max-width: 980px;
     margin: 0 auto;
     overflow: hidden;
-
-    
-    /* display: flex;
-    flex-direction: column; */
 }
+
 .star-warning {
     color: red;
 }

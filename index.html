@@ -35,13 +35,11 @@
             <form class="wrapper-choose-period">
                 <label for="" class="wrapper-choose-period__title">Период</label>
                 <div class="wrapper-inputs">
-                    <input type="text" placeholder="начало" onfocus="(this.type='date')" required
-                        pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" class="wrapper-choose-period__start">
+                    <input type="date" class="wrapper-choose-period__start">
                     <span class="wrapper-choose-period__dash">-</span>
-                    <input type="text" placeholder="окончание" onfocus="(this.type='date')"
-                        class="wrapper-choose-period__finish">
+                    <input type="date" class="wrapper-choose-period__finish">
                 </div>
-                <button type="submit" class="wrapper-choose-period__button">Показать</button>
+                <a href=".review-popup" class="wrapper-choose-period__button">Показать</a>  
             </form>
             <div class="extraction">
                 <h3 class="extraction__title">Вывод дохода:</h3>
@@ -72,9 +70,9 @@
                 Если вы являетесь плательщиком налога на
                 профессиональный доход, вам необходимо указывать другие
                 суммы в налоговом отчете. Для их отображения обратитесь к нам:
-                <a class="support__mail-link" href="mailto:help@protutor.by">help@protutor.by</a>
+                <a class="support__mail-phone-link" href="mailto:help@protutor.by">help@protutor.by</a>
                 или
-                <a href="tel:+375293035050" class="contacts__attention-phone">+375 (29) 303-50-50</a>
+                <a href="tel:+375293035050" class="support__mail-phone-link">+375 (29) 303-50-50</a>
             </p>
 
             <div class="amounts-extraction-all">
@@ -140,7 +138,7 @@
             </a>
             <div class="wrapper-users-support">
                 <p class="support">Поддержка <br /> пользователей: <br />
-                    <a class="support__mail-link" href="mailto:help@protutor.by">help@protutor.by</a>
+                    <a class="support__mail-phone-link" href="mailto:help@protutor.by">help@protutor.by</a>
                 </p>
             </div>
             <div class="wrapper-contacts">

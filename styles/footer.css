@@ -1,6 +1,7 @@
 .footer {
     background-color: var(--background-color-header-footer);
     height: 140px;
+    color: var(--text-color-header-footer);
 
 }
 
@@ -21,10 +22,10 @@
 
 .support {
     text-transform: uppercase;
-    color: var(--font-color-header-footer);
+    
 }
 
-.support__mail-link {
+.support__mail-phone-link {
     text-transform: lowercase;
     text-decoration: none;
     color: #7cc576;
@@ -44,7 +45,8 @@
 .contacts__phone {
     text-decoration: none;
     font-size: 21px;
-    color: var(--font-color-header-footer);
+    color: var(--text-color-header-footer);
+    margin-bottom: 5px;
 }
 
 .contacts__work-time {

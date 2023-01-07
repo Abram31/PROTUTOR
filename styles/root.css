@@ -5,9 +5,12 @@
     --background-color-main: #fff;
     --background-color-header-footer: #333333;
 
-    --font-size-report-title: 30px;
-    --font-size-report-choose-period-title: 25px;
+    --text-color-header-footer: #fff;
 
-    --font-size-report-choose-period-text: 20px;
+    --font-size-main: 14px;
+    --font-size-report-title: 25px;
+    --font-size-report-choose-period-title: 20px;
+
+    --font-size-report-choose-period-text: 14px;
 }
 
