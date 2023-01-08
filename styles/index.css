@@ -2,13 +2,22 @@ body {
     font-family: "GothamProRegular", sans-serif;
     background-color: var(--background-color-body);
     font-size: var(--font-size-main);
+    min-height: 100vh;
+
+    position: relative;
+    margin: 0;
+    padding: 0;
+
 }
 
 .main {
     max-width: 950px;
     margin: 0 auto;
     overflow: hidden;
-    color: #3b3b3b;;
+    color: #3b3b3b;
+
+
+    flex: 1 0 auto;
 }
 
 .star-warning {

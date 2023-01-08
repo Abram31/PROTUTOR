@@ -2,7 +2,10 @@
     background-color: var(--background-color-header-footer);
     height: 140px;
     color: var(--text-color-header-footer);
-
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
 }
 
 .wrapper-footer {
