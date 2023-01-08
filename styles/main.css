@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     background-color: var(--background-color-main);
-    padding: 2rem 1.2rem;
+    padding: 2rem 3.2rem;
     border-radius: 3px;
     box-shadow: 0 4px 12px rgb(0 0 0 / 12%);
     margin: 0 0 50px 0;
@@ -42,17 +42,20 @@
     border-radius: 5px;
     border: 2px solid #F0F0F0;
     background-color: #f5f5f530;
+    padding: 0 15px;
 }
 
 .wrapper-choose-period__start:hover,
 .wrapper-choose-period__finish:hover,
 .wrapper-choose-period__button:hover {
     cursor: pointer;
-    
+
 }
+
 .wrapper-choose-period__button:hover {
     background-color: #7cc576d4;
 }
+
 .wrapper-choose-period__button:active {
     background-color: #579851;
 }
@@ -139,12 +142,13 @@
 /* =================== Attention =============*/
 .text-warning {
     font-size: 12px;
-    line-height: 1.5rem;
+    width: 50%;
+    line-height: 1.15;
+    text-align: justify;
 }
 
 .text-warning__attention {
     font-weight: bold;
-    color: black;
 }
 
 .support__mail-link {}
@@ -179,6 +183,11 @@
 .other_statistic__sum-lessons-learned,
 .sum-lessons-learned__amount {
     font-size: var(--font-size-report-choose-period-text);
+}
+.paid-lessons__amount,
+.lessons-learned__amount,
+.sum-lessons-learned__amount {
+    margin: 0 0 0 1rem;
 }
 
 .other_statistic {}

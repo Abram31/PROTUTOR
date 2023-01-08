@@ -8,7 +8,7 @@
 .wrapper-footer {
     margin: 0 auto;
     padding: 0 1rem;
-    max-width: 980px;
+    max-width: 950px;
     height: 100%;
 
     display: flex;
@@ -16,13 +16,21 @@
     justify-content: space-between;
 }
 
+.logo-footer {
+    padding: 8px 0px 0 9px;
+}
+
+.logo-footer__img {}
+
 .wrapper-users-support {
+    width: 14.5%;
     display: flex;
+    padding: 21px 0 0 0px;
 }
 
 .support {
     text-transform: uppercase;
-    
+
 }
 
 .support__mail-phone-link {
@@ -35,18 +43,20 @@
     text-decoration: underline;
 }
 
-.wrapper-contacts {}
+.wrapper-contacts {
+    width: 272px;
+}
 
 .contacts {
     display: flex;
     flex-direction: column;
+    padding: 0px 0 0 36px;
 }
 
 .contacts__phone {
     text-decoration: none;
     font-size: 21px;
     color: var(--text-color-header-footer);
-    margin-bottom: 5px;
 }
 
 .contacts__work-time {

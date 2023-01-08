@@ -5,9 +5,10 @@ body {
 }
 
 .main {
-    max-width: 980px;
+    max-width: 950px;
     margin: 0 auto;
     overflow: hidden;
+    color: #3b3b3b;;
 }
 
 .star-warning {
