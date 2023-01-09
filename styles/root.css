@@ -1,7 +1,7 @@
 :root {
     --font-color-header-footer: rgb(255, 255, 255, 0.8);
 
-    --background-color-body:#F5F5F5;
+    --background-color-body: #F5F5F5;
     --background-color-main: #fff;
     --background-color-header-footer: #3c3c3c;
 
@@ -12,5 +12,6 @@
     --font-size-report-choose-period-title: 20px;
 
     --font-size-report-choose-period-text: 14px;
-}
 
+    --font-family-titles: "GothamProLight", sans-serif;
+}
