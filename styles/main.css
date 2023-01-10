@@ -188,6 +188,7 @@
 .sum-lessons-learned__amount {
     font-size: var(--font-size-report-choose-period-text);
 }
+
 .paid-lessons__amount,
 .lessons-learned__amount,
 .sum-lessons-learned__amount {
@@ -203,4 +204,76 @@
 
 .description {
     font-size: 12px;
+}
+
+@media (max-width: 550px) {
+    .reports {
+        padding: 2rem 1rem;
+    }
+
+    .wrapper-choose-period {}
+
+    .wrapper-choose-period__start,
+    .wrapper-choose-period__finish {
+        width: 150px;
+
+    }
+
+    .wrapper-choose-period__button {
+        width: 200px;
+    }
+
+    .text-warning {
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .amounts-extraction-all__sum,
+    .amounts-tax-all__sum,
+    .other_statistic__paid-lessons,
+    .paid-lessons__amount,
+    .other_statistic__lessons-learned,
+    .lessons-learned__amount,
+    .other_statistic__sum-lessons-learned,
+    .sum-lessons-learned__amount,
+    .amounts-extraction-all__title,
+    .amounts-tax-all__title,
+    .date,
+    .amount-extraction,
+    .amount-tax,
+    .column-date,
+    .column-amount-extraction,
+    .column-amount-tax,
+    .extraction__description {
+        font-size: var(--font-size-report-choose-period-text-small);
+    }
+
+}
+
+@media (max-width: 460px) {
+    .wrapper-choose-period {}
+
+    .wrapper-choose-period__start,
+    .wrapper-choose-period__finish {
+        width: 120px;
+
+    }
+
+    .wrapper-choose-period__button {
+        width: 170px;
+    }
+}
+
+@media (max-width: 400px) {
+    .wrapper-choose-period {}
+
+    .wrapper-choose-period__start,
+    .wrapper-choose-period__finish {
+        width: 100px;
+
+    }
+
+    .wrapper-choose-period__button {
+        width: 150px;
+    }
 }

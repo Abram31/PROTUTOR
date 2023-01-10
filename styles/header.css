@@ -58,7 +58,7 @@
 @media (max-width: 670px) {
     .wrapper-links {
         width: 360px;
-        height: 100%;
+        height: calc(100% - 70px);
         position: absolute;
         right: 0;
         flex-direction: column;

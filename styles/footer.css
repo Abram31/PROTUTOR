@@ -6,6 +6,8 @@
     width: 100%;
     bottom: 0;
     left: 0;
+
+    height: fit-content;
 }
 
 .wrapper-footer {
@@ -17,6 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .logo-footer {
@@ -64,4 +67,19 @@
 
 .contacts__work-time {
     color: #747275;
+}
+
+@media(max-width:650px) {
+    .footer {
+        padding: 0 0 2rem 0;
+    }
+    .wrapper-footer {
+        justify-content: space-around;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .wrapper-users-support {
+        width: fit-content;
+    }
 }
