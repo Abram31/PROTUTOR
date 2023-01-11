@@ -219,6 +219,12 @@
 
     }
 
+    .date {
+        padding: 0 1rem 0 0;
+    }
+
+
+
     .wrapper-choose-period__button {
         width: 200px;
     }
@@ -272,7 +278,17 @@
 
     }
 
+    .amounts-tax-all__title {
+        width: 7.5rem;
+    }
+
     .wrapper-choose-period__button {
         width: 150px;
+    }
+
+    .paid-lessons__amount,
+    .lessons-learned__amount,
+    .sum-lessons-learned__amount {
+        margin: 0 0 0 .4rem;
     }
 }
